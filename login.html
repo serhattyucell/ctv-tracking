@@ -1,0 +1,66 @@
+<body class="authentication--body" onpageshow="hideLoadingImage()">
+    <div class="login--card__password">
+        <div class="brand--logo">
+            <img src="https://s3.amazonaws.com/een-brand-assets/pronet/logo_large.png" id="brand--logo"
+                data-fallback="/images/een.svg" onerror="this.onerror=null; this.src=this.dataset.fallback;">
+        </div>
+        <form class="authentication-form authentication-form__password" method="POST" action="/login"><input
+                type="hidden" name="_csrf"
+                value="VMJJlTBRXz4_m1dm5QxE598n5SrnYyw4_OxmyBkUASGW3VTJMfQs9AVoaw8So29U0CFw37wWyEjQBx4Vz94Aq392NUWh5GGt">
+            <div class="authentication--signin">Sign in</div>
+            <input value="ilter499@gmail.com" name="email" placeholder="Email"
+                class="authentication--input__field disabled--pointer input-text__overflow" type="email"
+                id="authentication--input__fieldPassword" autocomplete="username" pattern="[^@\s]+@[^@\s]+\.[^@\s]+"
+                oninput="this.setCustomValidity('');removeValidationError(this)"
+                oninvalid="this.setCustomValidity(' ') ; triggerCustomValidation(this)" onblur="validate(this);"
+                onclick="redirectToLoginPage(); return false;" tabindex="1" readonly="readonly">
+            <img src="/images/editIcon.svg" class="authentication--password__edit"
+                onclick="redirectToLoginPage(); return false;">
+            <input name="password" placeholder="Password" class="authentication--input__password input-text__overflow"
+                type="text" id="authentication--input__password" autocomplete="current-password"
+                oninput="this.setCustomValidity('');removeValidationError(this)" oninvalid="this.setCustomValidity(' ')"
+                required="" tabindex="2">
+            <p id="authentication--input__capsLock" class="authentication--input__capsLock" style="display: none;">CAPS
+                LOCK</p>
+            <img src="/images/eye.svg"
+                class="authentication-password__eye visibility-unset authentication--eye__icon--blue"
+                onclick="showPassword('password')">
+            <div class="authentication--validation-message" id="authentication-email" style="visibility: hidden;">
+                Invalid email format, please try again
+            </div>
+            <div class="authentication--validation-message" id="authentication-required" style="visibility: hidden;">
+                This is a required field
+            </div>
+            <div class="authentication--controls">
+                <button type="button" class="authentication--button__account" style="color: #0091da"
+                    onclick="location.href='/forgotPassword'">
+
+                    <div>
+                        Forgot password?
+                    </div>
+                </button>
+                <button type="submit" id="next" onclick="checkIfInputIsRequired(this)" style="background: #0091da"
+                    class="authentication--button__next" tabindex="3">Sign in</button>
+            </div>
+        </form>
+
+    </div>
+    <footer class="authentication--brand__footer" id="authentication--brand__footer">
+        <div class="authentication--brand-name__footer">
+            ©
+            <script>document.write(new Date().getFullYear())</script>2026
+            <span>Pronet Guvenlik Hizmetleri A.S.</span>, All rights reserved
+        </div>
+        <div class="authentication--email__footer"></div>
+        <div class="authentication--phone__footer">
+            <span>4441911</span>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="/js/main.js"></script>
+    <script type="text/javascript" src="/js/useAppcues.js" defer=""></script>
+
+    <div id="give-freely-root-mbnbehikldjhnfehhnaidhjhoofhpehk" class="give-freely-root"
+        data-extension-id="mbnbehikldjhnfehhnaidhjhoofhpehk" data-extension-name="CSS Peeper" style="display: block;">
+    </div>
+</body>
